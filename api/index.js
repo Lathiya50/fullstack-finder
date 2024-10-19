@@ -46,8 +46,12 @@ app.use((err, req, res, next) => {
 
   return res.status(errorStatus).send(errorMessage);
 });
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+const PORT = process.env.PORT || 8800;
 
-app.listen(8800, () => {
+app.listen(PORT, () => {
   connect();
-  console.log("Backend server is running on 8800!");
+  console.log(`Backend server is running on ${PORT}!`);
 });
