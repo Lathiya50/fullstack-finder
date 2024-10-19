@@ -16,7 +16,14 @@ export const intent = async (req, res, next) => {
     metadata: {
       company: "Finder",
     },
-
+    name: "Harmik",
+    address: {
+      line1: "line1 addres",
+      postal_code: "500001",
+      city: "Hyderabad",
+      state: "Telangana",
+      country: "IN",
+    },
     description: "payment",
   });
 
